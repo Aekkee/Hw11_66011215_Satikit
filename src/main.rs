@@ -60,7 +60,7 @@ fn doc_to_table(v: Vec<&str>, output_file: &str) {
     file.write(b"<style>");
     file.write(b"\ntable, td, th {\n\tborder: 1px solid #000000;\n\tborder-collapse: collapse;\n}\n</style>\n");
     file.write(b"<table>\n");
-    file.write(b"\t<tr>\n\t\t<th>text</th>\n\t\t<th>number of paragraph</th>\n\t</tr>");
+    file.write(b"\t<tr>\n\t\t<th>text</th>\n\t\t<th>numbers of paragraph</th>\n\t</tr>");
     for i in docs {
         let mut count_line = 0;
         let line = i
@@ -104,7 +104,7 @@ fn doc_to_text_table(v: Vec<&str>, output_file: &str) {
     file.write(b"<style>");
     file.write(b"\ntable, td, th {\n\tborder: 1px solid #000000;\n\tborder-collapse: collapse;\n}\n</style>\n");
     file.write(b"<table>\n");
-    file.write(b"\t<tr>\n\t\t<th>text</th>\n\t\t<th>number of paragraph</th>\n\t</tr>");
+    file.write(b"\t<tr>\n\t\t<th>text</th>\n\t\t<th>numbers of word</th>\n\t</tr>");
     for i in docs {
         let word = i
             .split_ascii_whitespace()

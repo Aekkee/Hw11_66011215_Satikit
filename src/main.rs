@@ -5,7 +5,8 @@ use std::io::Read;
 
 fn main(){
     let v = vec!["test1.txt", "test2.txt", "test3.txt"];
-    doc_to_text_table(v, "output2.html")
+    doc_to_table(v.clone(), "output1.html");
+    doc_to_text_table(v.clone(), "output2.html")
 }
 
 #[test]
@@ -79,7 +80,7 @@ fn doc_to_table(v: Vec<&str>, output_file: &str) {
             format!(
                 "\t<tr>\n\t\t<td>{}</td>\n\t\t<td>{}</td>\n\t</tr>",
                 i,
-                count_line
+                count_line + 1
             )
             .as_bytes(),
         );
